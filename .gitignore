@@ -1,0 +1,14 @@
+node_modules
+.next
+dist
+build
+coverage
+.turbo
+.env
+.env.local
+.env.*.local
+!.env.example
+package-lock.json
+apps/web/.next
+packages/db/generated
+write-test.txt

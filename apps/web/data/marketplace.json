@@ -1,0 +1,121 @@
+{
+  "companies": [
+    {
+      "id": "company-nile-sunrise",
+      "slug": "nile-sunrise-balloons",
+      "name": "Nile Sunrise Balloons",
+      "description": "رحلات بالون طائر في الأقصر مع باقات فجر ومشاهدة بانورامية لوادي الملوك.",
+      "phone": "+20 100 000 1001",
+      "email": "operator.admin@luxorballoon.test",
+      "city": "Luxor",
+      "status": "active",
+      "createdAt": "2026-05-01T08:00:00.000Z"
+    },
+    {
+      "id": "company-golden-sky",
+      "slug": "golden-sky-balloons",
+      "name": "Golden Sky Balloons",
+      "description": "شركة متخصصة في رحلات الفجر والجولات الخاصة مع نقل من الفنادق.",
+      "phone": "+20 100 000 1002",
+      "email": "ops@luxorballoon.test",
+      "city": "Luxor",
+      "status": "active",
+      "createdAt": "2026-05-02T08:00:00.000Z"
+    }
+  ],
+  "users": [],
+  "programs": [
+    {
+      "id": "program-sunrise-classic",
+      "companyId": "company-nile-sunrise",
+      "slug": "sunrise-balloon-classic",
+      "title": "برنامج شروق الشمس الكلاسيكي",
+      "shortDescription": "رحلة فجر لمدة 45 دقيقة مع نقل ذهاب وعودة من فنادق الأقصر.",
+      "description": "يتضمن البرنامج الاستقبال من الفندق قبل الفجر، الانتقال إلى منطقة الإقلاع، رحلة بالون طائر لمدة 45 دقيقة، ومشروب ترحيبي بعد الهبوط.",
+      "meetingPoint": "فنادق البر الغربي والشرقي",
+      "flightWindow": "04:30 - 06:00",
+      "duration": "45 دقيقة",
+      "priceAdult": 100,
+      "priceChild": 75,
+      "capacity": 18,
+      "status": "published",
+      "createdAt": "2026-05-05T07:00:00.000Z"
+    },
+    {
+      "id": "program-vip-private",
+      "companyId": "company-nile-sunrise",
+      "slug": "vip-private-balloon",
+      "title": "برنامج VIP خاص",
+      "shortDescription": "جولة بالون خاصة لعدد محدود مع إفطار خفيف وسيارة خاصة.",
+      "description": "برنامج خاص للمجموعات الصغيرة يشمل نقل خاص، رحلة هادئة بإشراف فريق VIP، وتنسيق شخصي قبل وبعد الإقلاع.",
+      "meetingPoint": "استقبال خاص من الفندق",
+      "flightWindow": "05:15 - 06:30",
+      "duration": "60 دقيقة",
+      "priceAdult": 160,
+      "priceChild": 120,
+      "capacity": 8,
+      "status": "published",
+      "createdAt": "2026-05-05T07:30:00.000Z"
+    },
+    {
+      "id": "program-hotel-pickup",
+      "companyId": "company-golden-sky",
+      "slug": "hotel-pickup-balloon",
+      "title": "برنامج النقل الفندقي الكامل",
+      "shortDescription": "رحلة شاملة النقل والفاوتشر الرقمي مع فريق دعم قبل الإقلاع.",
+      "description": "برنامج مناسب للأفراد والعائلات، مع تأكيد فوري، نقل من الفندق، وإصدار فاوتشر إلكتروني بعد الحجز.",
+      "meetingPoint": "الاستقبال من الفندق",
+      "flightWindow": "04:45 - 06:10",
+      "duration": "50 دقيقة",
+      "priceAdult": 95,
+      "priceChild": 70,
+      "capacity": 16,
+      "status": "published",
+      "createdAt": "2026-05-06T06:00:00.000Z"
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": "subscription-001",
+      "programId": "program-sunrise-classic",
+      "companyId": "company-nile-sunrise",
+      "customerName": "Ali Salem",
+      "customerEmail": "ali@example.com",
+      "customerPhone": "+20 111 222 333",
+      "travelDate": "2026-05-10",
+      "adults": 2,
+      "children": 1,
+      "notes": "نحتاج كرسيا للأطفال في السيارة.",
+      "status": "new",
+      "createdAt": "2026-05-07T16:30:00.000Z"
+    },
+    {
+      "id": "subscription-002",
+      "programId": "program-vip-private",
+      "companyId": "company-nile-sunrise",
+      "customerName": "Mina George",
+      "customerEmail": "mina@example.com",
+      "customerPhone": "+20 122 333 444",
+      "travelDate": "2026-05-11",
+      "adults": 4,
+      "children": 0,
+      "notes": "نرغب في سيارة خاصة من الفندق.",
+      "status": "contacted",
+      "createdAt": "2026-05-07T17:00:00.000Z"
+    },
+    {
+      "id": "subscription-003",
+      "programId": "program-hotel-pickup",
+      "companyId": "company-golden-sky",
+      "customerName": "Sara Mostafa",
+      "customerEmail": "sara@example.com",
+      "customerPhone": "+20 155 888 777",
+      "travelDate": "2026-05-12",
+      "adults": 2,
+      "children": 0,
+      "notes": "",
+      "status": "confirmed",
+      "createdAt": "2026-05-07T18:00:00.000Z"
+    }
+  ]
+}
