@@ -9,7 +9,6 @@ const locales = ["ar", "en"];
 
 export function PlatformShowcase({
   defaultLocale = "ar",
-  session = null,
   featuredPrograms = [],
 }) {
   const [locale, setLocale] = useState(
@@ -17,25 +16,26 @@ export function PlatformShowcase({
   );
   const content = platformContent[locale];
   const labels = {
-    coreValue: locale === "ar" ? "القيمة الأساسية" : "Core value",
-    platformFoundation: locale === "ar" ? "أساس المنصة" : "Platform foundation",
-    modules: locale === "ar" ? "الموديولات" : "Modules",
-    pricingEngine: locale === "ar" ? "محرك التسعير" : "Pricing engine",
-    accessControl: locale === "ar" ? "الصلاحيات" : "Access control",
-    connectivity: locale === "ar" ? "الربط" : "Connectivity",
-    deliveryPath: locale === "ar" ? "مسار التنفيذ" : "Delivery path",
-    preview: locale === "ar" ? "معاينة" : "Preview",
-    login: locale === "ar" ? "تسجيل الدخول" : "Sign in",
-    dashboard: locale === "ar" ? "لوحة التحكم" : "Dashboard",
-    browse: locale === "ar" ? "تصفح البرامج" : "Browse programs",
-    register: locale === "ar" ? "سجّل شركتك" : "Register company",
+    browse: locale === "ar" ? "تصفح الرحلات" : "Browse flights",
+    bookNow: locale === "ar" ? "احجز الآن" : "Book now",
+    viewAll: locale === "ar" ? "عرض كل الرحلات" : "View all flights",
+    featuredFlights: locale === "ar" ? "رحلات مميزة" : "Featured flights",
+    whyUs: locale === "ar" ? "لماذا نحن" : "Why us",
+    howToBook: locale === "ar" ? "كيف تحجز" : "How to book",
+    testimonials: locale === "ar" ? "آراء العملاء" : "Customer reviews",
+    contactUs: locale === "ar" ? "تواصل معنا" : "Contact us",
+    callUs: locale === "ar" ? "اتصل بنا" : "Call us",
+    emailUs: locale === "ar" ? "راسلنا" : "Email us",
+    whatsapp: locale === "ar" ? "واتساب" : "WhatsApp",
+    openProgram: locale === "ar" ? "فتح صفحة الرحلة" : "Open flight page",
+    step: locale === "ar" ? "خطوة" : "Step",
   };
 
   return (
     <div className="page-shell" dir={content.dir}>
       <header className="topbar">
         <div>
-          <p className="brand-kicker">Luxor Balloon Hub</p>
+          <p className="brand-kicker">Luxor Balloon</p>
           <h1 className="brand-title">{content.siteTitle}</h1>
         </div>
         <div className="topbar-actions">
@@ -46,17 +46,9 @@ export function PlatformShowcase({
               </a>
             ))}
           </nav>
-          <Link className="button secondary topbar-cta" href="/programs">
-            {labels.browse}
+          <Link className="button primary topbar-cta" href="/programs">
+            {labels.bookNow}
           </Link>
-          <Link className="button secondary topbar-cta" href={session ? "/dashboard" : "/login"}>
-            {session ? labels.dashboard : labels.login}
-          </Link>
-          {!session ? (
-            <Link className="button primary topbar-cta" href="/register/company">
-              {labels.register}
-            </Link>
-          ) : null}
           <div className="locale-switcher" aria-label="Language switcher">
             {locales.map((item) => (
               <button
@@ -81,11 +73,11 @@ export function PlatformShowcase({
 
             <div className="hero-actions">
               <Link className="button primary" href="/programs">
+                {labels.bookNow}
+              </Link>
+              <a className="button secondary" href="#programs">
                 {labels.browse}
-              </Link>
-              <Link className="button secondary" href={session ? "/dashboard/operator" : "/register/company"}>
-                {session ? labels.dashboard : labels.register}
-              </Link>
+              </a>
             </div>
 
             <ul className="highlight-list">
@@ -95,23 +87,15 @@ export function PlatformShowcase({
             </ul>
           </div>
 
-          <aside className="control-panel">
-            <div className="panel-header">
-              <span className="live-dot" />
-              <p>{content.controlPanel.title}</p>
-            </div>
-            <div className="metric-grid">
-              {content.controlPanel.items.map((item) => (
-                <article key={item.label} className="metric-card">
-                  <span>{item.label}</span>
-                  <strong>{item.value}</strong>
-                </article>
-              ))}
+          <aside className="hero-visual">
+            <div className="hero-image-placeholder">
+              <span className="balloon-icon">🎈</span>
+              <p>{locale === "ar" ? "شروق الأقصر" : "Luxor Sunrise"}</p>
             </div>
           </aside>
         </section>
 
-        <section className="stats-grid" aria-label="Platform stats">
+        <section className="stats-grid" aria-label="Stats">
           {content.stats.map((stat) => (
             <article key={stat.label} className="stat-card">
               <strong>{stat.value}</strong>
@@ -122,13 +106,11 @@ export function PlatformShowcase({
 
         <section className="section-block" id="programs">
           <div className="section-heading">
-            <span className="section-kicker">
-              {locale === "ar" ? "برامج منشورة" : "Published programs"}
-            </span>
+            <span className="section-kicker">{labels.featuredFlights}</span>
             <h3>
               {locale === "ar"
-                ? "البرامج التي يراها العميل على الموقع"
-                : "What customers see on the marketplace"}
+                ? "اختر رحلتك القادمة"
+                : "Choose your next flight"}
             </h3>
           </div>
           <div className="featured-program-grid">
@@ -145,114 +127,103 @@ export function PlatformShowcase({
                   <span>{program.duration}</span>
                 </div>
                 <Link className="inline-link" href={`/programs/${program.slug}`}>
-                  {locale === "ar" ? "فتح صفحة البرنامج" : "Open program page"}
+                  {labels.openProgram}
                 </Link>
               </article>
             ))}
           </div>
+          <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
+            <Link className="button primary" href="/programs">
+              {labels.viewAll}
+            </Link>
+          </div>
         </section>
 
-        <section className="section-block">
+        <section className="section-block" id="why-us">
           <div className="section-heading">
-            <span className="section-kicker">{labels.coreValue}</span>
-            <h3>{labels.platformFoundation}</h3>
+            <span className="section-kicker">{labels.whyUs}</span>
+            <h3>
+              {locale === "ar"
+                ? "ليه تختار بالون الأقصر؟"
+                : "Why choose Luxor Balloon?"}
+            </h3>
           </div>
           <div className="pillar-grid">
-            {content.pillars.map((pillar) => (
-              <article key={pillar.title} className="feature-card">
-                <h4>{pillar.title}</h4>
-                <p>{pillar.description}</p>
+            {content.whyUs.map((item) => (
+              <article key={item.title} className="feature-card">
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="section-block" id="modules">
+        <section className="section-block" id="how-to-book">
           <div className="section-heading">
-            <span className="section-kicker">{labels.modules}</span>
-            <h3>{locale === "ar" ? "مكونات النسخة الأولى" : "MVP modules"}</h3>
+            <span className="section-kicker">{labels.howToBook}</span>
+            <h3>{content.howToBook.title}</h3>
           </div>
-          <div className="module-grid">
-            {content.modules.map((item) => (
-              <article key={item} className="list-card">
-                <p>{item}</p>
+          <div className="steps-grid">
+            {content.howToBook.steps.map((step) => (
+              <article key={step.number} className="step-card">
+                <span className="step-number">{step.number}</span>
+                <h4>{step.title}</h4>
+                <p>{step.description}</p>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="section-block dual-grid" id="pricing">
-          <div className="pricing-box">
-            <div className="section-heading">
-              <span className="section-kicker">{labels.pricingEngine}</span>
-              <h3>{content.pricing.title}</h3>
-            </div>
-            <div className="pricing-grid">
-              {content.pricing.cards.map((item) => (
-                <article key={item.name} className="pricing-card">
-                  <span>{item.name}</span>
-                  <strong>{item.amount}</strong>
-                  <p>{item.note}</p>
-                </article>
-              ))}
-            </div>
+        <section className="section-block" id="testimonials">
+          <div className="section-heading">
+            <span className="section-kicker">{labels.testimonials}</span>
+            <h3>
+              {locale === "ar"
+                ? "ماذا قالوا عن تجربتهم"
+                : "What they said about their experience"}
+            </h3>
           </div>
-
-          <div className="roles-box">
-            <div className="section-heading">
-              <span className="section-kicker">{labels.accessControl}</span>
-              <h3>{content.roles.title}</h3>
-            </div>
-            <div className="role-list">
-              {content.roles.items.map((role) => (
-                <article key={role.title} className="role-card">
-                  <h4>{role.title}</h4>
-                  <p>{role.description}</p>
-                </article>
-              ))}
-            </div>
+          <div className="testimonials-grid">
+            {content.testimonials.map((t) => (
+              <article key={t.name} className="testimonial-card">
+                <div className="testimonial-stars">
+                  {"★".repeat(Number(t.rating))}{"☆".repeat(5 - Number(t.rating))}
+                </div>
+                <p className="testimonial-text">"{t.text}"</p>
+                <span className="testimonial-name">— {t.name}</span>
+              </article>
+            ))}
           </div>
         </section>
 
-        <section className="section-block dual-grid" id="integrations">
-          <div className="integration-box">
-            <div className="section-heading">
-              <span className="section-kicker">{labels.connectivity}</span>
-              <h3>{content.integrations.title}</h3>
-            </div>
-            <div className="bullet-list">
-              {content.integrations.items.map((item) => (
-                <article key={item} className="list-card">
-                  <p>{item}</p>
-                </article>
-              ))}
-            </div>
+        <section className="section-block" id="contact">
+          <div className="section-heading">
+            <span className="section-kicker">{labels.contactUs}</span>
+            <h3>{content.contact.title}</h3>
+            <p>{content.contact.description}</p>
           </div>
-
-          <div className="roadmap-box">
-            <div className="section-heading">
-              <span className="section-kicker">{labels.deliveryPath}</span>
-              <h3>{content.roadmap.title}</h3>
-            </div>
-            <div className="timeline-list">
-              {content.roadmap.items.map((item) => (
-                <article key={item} className="timeline-card">
-                  <p>{item}</p>
-                </article>
-              ))}
-            </div>
+          <div className="contact-grid">
+            <a className="contact-card" href={`tel:${content.contact.phone.replace(/\s/g, "")}`}>
+              <span className="contact-icon">📞</span>
+              <strong>{labels.callUs}</strong>
+              <span>{content.contact.phone}</span>
+            </a>
+            <a className="contact-card" href={`mailto:${content.contact.email}`}>
+              <span className="contact-icon">✉️</span>
+              <strong>{labels.emailUs}</strong>
+              <span>{content.contact.email}</span>
+            </a>
+            <a
+              className="contact-card"
+              href={`https://wa.me/${content.contact.whatsapp.replace(/[^0-9]/g, "")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="contact-icon">💬</span>
+              <strong>{labels.whatsapp}</strong>
+              <span>{content.contact.whatsapp}</span>
+            </a>
           </div>
-        </section>
-
-        <section className="portal-cta">
-          <div>
-            <span className="section-kicker">{labels.preview}</span>
-            <h3>{content.portalPreview.title}</h3>
-            <p>{content.portalPreview.description}</p>
-          </div>
-          <Link className="button primary" href="/portal">
-            {content.portalPreview.cta}
-          </Link>
         </section>
       </main>
 

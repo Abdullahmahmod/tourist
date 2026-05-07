@@ -411,6 +411,142 @@ button {
   gap: 16px;
 }
 
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image-placeholder {
+  display: grid;
+  place-items: center;
+  gap: 14px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(31, 107, 111, 0.08), rgba(209, 121, 42, 0.08));
+}
+
+.balloon-icon {
+  font-size: 5rem;
+}
+
+.hero-image-placeholder p {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.step-card {
+  display: grid;
+  gap: 10px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.62);
+  text-align: center;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 800;
+  font-family: "Manrope", "Tajawal", sans-serif;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+}
+
+.step-card h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.step-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.testimonial-card {
+  display: grid;
+  gap: 12px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.testimonial-stars {
+  color: var(--accent);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.testimonial-text {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.testimonial-name {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.contact-card {
+  display: grid;
+  gap: 8px;
+  place-items: center;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.62);
+  text-align: center;
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(209, 121, 42, 0.35);
+}
+
+.contact-icon {
+  font-size: 2rem;
+}
+
+.contact-card strong {
+  font-size: 1.05rem;
+}
+
+.contact-card span:last-child {
+  color: var(--muted);
+}
+
 .footer-note {
   padding: 0 0 24px;
   color: var(--muted);
@@ -1280,6 +1416,9 @@ button {
   .portal-grid,
   .stats-grid,
   .pillar-grid,
+  .steps-grid,
+  .testimonials-grid,
+  .contact-grid,
   .auth-grid,
   .dashboard-layout,
   .dashboard-grid,

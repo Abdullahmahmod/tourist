@@ -2,267 +2,160 @@ export const platformContent = {
   ar: {
     locale: "ar",
     dir: "rtl",
-    siteTitle: "منصة حجز البالون بالأقصر",
+    siteTitle: "بالون الأقصر",
     nav: [
-      { label: "المنصة", href: "#platform" },
-      { label: "الموديولات", href: "#modules" },
-      { label: "التسعير", href: "#pricing" },
-      { label: "الربط", href: "#integrations" },
+      { label: "الرحلات", href: "#programs" },
+      { label: "لماذا نحن", href: "#why-us" },
+      { label: "كيف تحجز", href: "#how-to-book" },
+      { label: "تواصل معنا", href: "#contact" },
     ],
     hero: {
-      eyebrow: "منصة موحدة لـ 32 شركة بالون طائر",
-      title: "نظام حجز وإصدار تذاكر حديث لإدارة رحلات البالون في الأقصر.",
+      eyebrow: "تجربة لا تُنسى فوق سماء الأقصر",
+      title: "استمتع برحلة بالون طائر فوق أروع آثار العالم",
       description:
-        "واجهة موحدة تجمع الحجز المباشر، إدارة الشركات، أسعار B2B وB2C، التقارير، والمدفوعات مع قابلية ربط مستقبلية مع Amadeus وBooking.com وShopify وأنظمة التذاكر السياحية.",
-      primaryCta: "استعراض البوابة",
-      secondaryCta: "قراءة المعمارية",
+        "انطلق في رحلة ساحرة عند شروق الشمس فوق معابد الأقصر ووادي الملوك. اختر من بين عشرات الرحلات اليومية واحجز مقعدك في دقائق.",
       highlights: [
-        "دعم العربية والإنجليزية من اليوم الأول",
-        "هيكل متعدد الشركات Multi-tenant",
-        "إصدار Voucher / Ticket تلقائي",
+        "إطلالة بانورامية على معابد الأقصر ووادي الملوك",
+        "رحلات يومية عند الشروق بأمان تام",
+        "حجز فوري وتأكيد فاوتشر على الإيميل",
       ],
     },
     stats: [
-      { value: "32", label: "شركة بالون مستهدفة" },
-      { value: "4", label: "لوحات تشغيل رئيسية" },
-      { value: "2", label: "نماذج تسعير أولية B2B / B2C" },
-      { value: "24/7", label: "جاهزية للحجز أونلاين" },
+      { value: "+10K", label: "مسافر سعيد" },
+      { value: "32", label: "شركة بالون معتمدة" },
+      { value: "365", label: "يوم في السنة" },
+      { value: "4.9", label: "تقييم العملاء من 5" },
     ],
-    controlPanel: {
-      title: "لوحة الإطلاق",
-      items: [
-        { label: "الحجوزات المؤكدة", value: "128" },
-        { label: "الإشغال اليومي", value: "84%" },
-        { label: "شركات فعالة", value: "27 / 32" },
-        { label: "مدفوعات قيد المراجعة", value: "11" },
-      ],
-    },
-    pillars: [
+    whyUs: [
       {
-        title: "إدارة شركات متعددة",
+        title: "أفضل الأسعار المضمونة",
         description:
-          "كل شركة لها لوحة مستقلة، مستخدمون وصلاحيات، سعات رحلات، وتسعير خاص مع إشراف مركزي كامل من الإدارة العامة.",
+          "قارن أسعار 32 شركة بالون في مكان واحد واحصل على أفضل عرض بدون وسطاء.",
       },
       {
-        title: "حجز وتذاكر في خطوة واحدة",
+        title: "حجز وتأكيد فوري",
         description:
-          "إنشاء الحجز، تحصيل الدفع، إصدار الفاوتشر، وإرسال تفاصيل الرحلة للعميل أو الوكيل من نفس المسار.",
+          "احجز مقعدك في دقائق واستلم الفاوتشر على إيميلك مباشرة بعد التأكيد.",
       },
       {
-        title: "منصة مفتوحة للربط",
+        title: "أمان واحترافية",
         description:
-          "تصميم الواجهة الخلفية والبيانات يسمح بإضافة بوابات الدفع وواجهات API وتطبيقات الموبايل لاحقًا بدون إعادة بناء النظام.",
+          "كل الشركات المعتمدة مرخصة وبتلتزم بأعلى معايير السلامة والجودة.",
       },
     ],
-    modules: [
-      "محرك بحث للحجوزات حسب التاريخ والشركة ونوع العميل",
-      "إدارة رحلات البالون والسعة والمقاعد المتاحة",
-      "إدارة أسعار B2C وB2B والوكالات والعقود",
-      "سجل مدفوعات وفواتير واسترداد مبالغ",
-      "إصدار Voucher / Ticket برقم مرجعي موحد",
-      "تقارير تشغيل ومالية ومؤشرات أداء",
-      "إدارة المستخدمين والصلاحيات ومسارات الاعتماد",
-      "ربط مستقبلي مع التذاكر السياحية والأتوبيسات وعروض الصوت والضوء",
+    howToBook: {
+      title: "كيف تحجز رحلتك؟",
+      steps: [
+        { number: "1", title: "اختر رحلتك", description: "تصفح الرحلات المتاحة واختار التاريخ والوقت المناسب" },
+        { number: "2", title: "قدّم بياناتك", description: "سجّل بيانات الركاب واختر طريقة الدفع" },
+        { number: "3", title: "استلم الفاوتشر", description: "احصل على تأكيد الحجز فوراً على إيميلك" },
+        { number: "4", title: "استمتع بالرحلة", description: "تواصل في الميعاد واستمتع بتجربة العمر" },
+      ],
+    },
+    testimonials: [
+      {
+        name: "أحمد محمد",
+        text: "تجربة رائعة! الحجز كان سهل جداً والرحلة كانت من أجمل لحظات حياتي. المنظر من فوق معبد الكرنك لا يوصف.",
+        rating: "5",
+      },
+      {
+        name: "سارة علي",
+        text: "نظمت رحلة لكل العائلة وكان كل شيء مرتب. الفاوتشر وصلنا بسرعة والشركة كانت محترفة جداً.",
+        rating: "5",
+      },
+      {
+        name: "خالد حسن",
+        text: "قارنت الأسعار هنا وحصلت على أفضل سعر. أنصح أي حد يروح الأقصر يجرب البالون من هنا.",
+        rating: "4",
+      },
     ],
-    pricing: {
-      title: "تسعير مرن حسب نوع العميل",
-      cards: [
-        {
-          name: "B2C",
-          amount: "$100",
-          note: "للعميل المباشر عبر الموقع أو التطبيق",
-        },
-        {
-          name: "B2B",
-          amount: "$80",
-          note: "للشركات والوكالات والشركاء المعتمدين",
-        },
-      ],
+    contact: {
+      title: "تواصل معنا",
+      description: "عندك سؤال أو محتاج مساعدة؟ فريقنا موجود لمساعدتك.",
+      phone: "+20 123 456 7890",
+      email: "info@luxorballoon.com",
+      whatsapp: "+20 123 456 7890",
     },
-    roles: {
-      title: "أنواع لوحات التحكم",
-      items: [
-        {
-          title: "لوحة الإدارة الرئيسية",
-          description:
-            "إدارة الشركات، الإعدادات العامة، التقارير المالية، متابعة الأداء، والربط الخارجي.",
-        },
-        {
-          title: "لوحة الشركة",
-          description:
-            "إدارة الرحلات اليومية، السعة، التسعير، الحجوزات، الفواتير، والوكلاء المرتبطين بالشركة.",
-        },
-        {
-          title: "لوحة الوكالات والشركاء",
-          description:
-            "إنشاء حجوزات B2B، مراجعة الرصيد، تحميل الفاوتشرات، وتتبع حالة المدفوعات.",
-        },
-        {
-          title: "لوحة خدمة العملاء",
-          description:
-            "تعديل الحجوزات، إعادة الإرسال، تسجيل الملاحظات، ومتابعة حالات الإلغاء والاسترداد.",
-        },
-      ],
-    },
-    integrations: {
-      title: "جاهزية للربط الخارجي",
-      items: [
-        "Shopify لواجهات البيع أو الباقات التجريبية",
-        "Amadeus لتوسيع الربط مع رحلات وخدمات السفر",
-        "Booking.com كشريك محتمل لقنوات التوزيع",
-        "بوابات الدفع الإلكتروني المحلية والدولية",
-        "أنظمة تذاكر المعابد والأتوبيسات وعروض الصوت والضوء",
-        "تطبيقات الموبايل عبر API موحد",
-      ],
-    },
-    roadmap: {
-      title: "مراحل التنفيذ المقترحة",
-      items: [
-        "Phase 1: تحليل المتطلبات، نمذجة العمليات، واعتماد سياسات التسعير والصلاحيات",
-        "Phase 2: MVP للحجوزات، التذاكر، الشركات، المدفوعات، والتقارير الأساسية",
-        "Phase 3: الربط الخارجي، تطبيقات الهاتف، أتمتة الإشعارات، وتحليلات متقدمة",
-      ],
-    },
-    portalPreview: {
-      title: "معاينة سريعة للبوابة",
-      description:
-        "صفحة تجريبية تعرض كيف يمكن تقسيم البيانات بين الإدارة العامة، الشركات، والشركاء.",
-      cta: "فتح المعاينة",
-    },
-    footer: "أساس مشروع قابل للتطوير إلى منصة تشغيل وحجز متكاملة لرحلات البالون بالأقصر.",
+    footer: "© 2025 بالون الأقصر — منصة حجز رحلات البالون الطائر في الأقصر. جميع الحقوق محفوظة.",
   },
   en: {
     locale: "en",
     dir: "ltr",
-    siteTitle: "Luxor Balloon Booking Platform",
+    siteTitle: "Luxor Balloon",
     nav: [
-      { label: "Platform", href: "#platform" },
-      { label: "Modules", href: "#modules" },
-      { label: "Pricing", href: "#pricing" },
-      { label: "Integrations", href: "#integrations" },
+      { label: "Trips", href: "#programs" },
+      { label: "Why Us", href: "#why-us" },
+      { label: "How to Book", href: "#how-to-book" },
+      { label: "Contact", href: "#contact" },
     ],
     hero: {
-      eyebrow: "A unified booking platform for 32 balloon operators",
-      title: "Modern reservation and ticketing for Luxor hot air balloon operations.",
+      eyebrow: "An unforgettable experience above Luxor's sky",
+      title: "Soar above the world's greatest monuments in a hot air balloon",
       description:
-        "A single experience for direct bookings, operator management, B2B/B2C pricing, reporting, and payments, with future-ready connectors for Amadeus, Booking.com, Shopify, and tourism ticketing systems.",
-      primaryCta: "View portal preview",
-      secondaryCta: "Read architecture",
+        "Take off at sunrise over the temples of Luxor and the Valley of the Kings. Choose from dozens of daily flights and book your seat in minutes.",
       highlights: [
-        "Arabic and English from day one",
-        "Built as a multi-tenant operator platform",
-        "Automatic voucher and ticket issuance",
+        "Panoramic views of Luxor temples and the Valley of the Kings",
+        "Daily sunrise flights with full safety standards",
+        "Instant booking with email voucher confirmation",
       ],
     },
     stats: [
-      { value: "32", label: "Target balloon companies" },
-      { value: "4", label: "Core operational dashboards" },
-      { value: "2", label: "Initial pricing tracks: B2B / B2C" },
-      { value: "24/7", label: "Online booking readiness" },
+      { value: "10K+", label: "Happy travelers" },
+      { value: "32", label: "Licensed operators" },
+      { value: "365", label: "Days a year" },
+      { value: "4.9", label: "Customer rating out of 5" },
     ],
-    controlPanel: {
-      title: "Launch board",
-      items: [
-        { label: "Confirmed bookings", value: "128" },
-        { label: "Daily occupancy", value: "84%" },
-        { label: "Active operators", value: "27 / 32" },
-        { label: "Payments in review", value: "11" },
-      ],
-    },
-    pillars: [
+    whyUs: [
       {
-        title: "Multi-company operations",
+        title: "Best prices guaranteed",
         description:
-          "Each operator gets an independent workspace for users, permissions, flight capacity, and pricing, while platform admins keep full central oversight.",
+          "Compare prices from 32 balloon operators in one place and get the best deal with no middlemen.",
       },
       {
-        title: "Booking to ticket in one flow",
+        title: "Instant booking & confirmation",
         description:
-          "Create the reservation, collect payment, issue the voucher, and send trip details to the traveler or partner from the same workflow.",
+          "Book your seat in minutes and receive your voucher directly by email right after confirmation.",
       },
       {
-        title: "Open integration foundation",
+        title: "Safety & professionalism",
         description:
-          "The data and backend layout is designed to support payment gateways, APIs, and future mobile apps without rebuilding the platform.",
+          "All listed operators are fully licensed and committed to the highest safety and quality standards.",
       },
     ],
-    modules: [
-      "Reservation search by date, operator, and customer segment",
-      "Balloon trip inventory, capacity, and seat availability",
-      "B2C, B2B, agency, and contract-based pricing controls",
-      "Payments, invoices, refunds, and balance tracking",
-      "Voucher and ticket generation with a shared reference ID",
-      "Operational and financial reporting",
-      "Users, permissions, and approval flows",
-      "Future ticketing support for temples, buses, and sound-and-light shows",
+    howToBook: {
+      title: "How to book your flight?",
+      steps: [
+        { number: "1", title: "Choose your flight", description: "Browse available flights and pick the date and time that suit you" },
+        { number: "2", title: "Enter your details", description: "Fill in passenger info and choose your payment method" },
+        { number: "3", title: "Get your voucher", description: "Receive instant booking confirmation to your email" },
+        { number: "4", title: "Enjoy the ride", description: "Show up at the meeting point and enjoy the experience of a lifetime" },
+      ],
+    },
+    testimonials: [
+      {
+        name: "Ahmed Mohamed",
+        text: "Amazing experience! Booking was super easy and the flight was one of the best moments of my life. The view over Karnak Temple is indescribable.",
+        rating: "5",
+      },
+      {
+        name: "Sarah Ali",
+        text: "Organized a trip for the whole family and everything was perfectly arranged. The voucher arrived quickly and the operator was very professional.",
+        rating: "5",
+      },
+      {
+        name: "Khaled Hassan",
+        text: "Compared prices here and got the best deal. I recommend anyone visiting Luxor to try the balloon through this platform.",
+        rating: "4",
+      },
     ],
-    pricing: {
-      title: "Flexible pricing by customer type",
-      cards: [
-        {
-          name: "B2C",
-          amount: "$100",
-          note: "Direct guest bookings through web or mobile",
-        },
-        {
-          name: "B2B",
-          amount: "$80",
-          note: "Approved agencies, resellers, and travel partners",
-        },
-      ],
+    contact: {
+      title: "Get in touch",
+      description: "Have a question or need help? Our team is here for you.",
+      phone: "+20 123 456 7890",
+      email: "info@luxorballoon.com",
+      whatsapp: "+20 123 456 7890",
     },
-    roles: {
-      title: "Dashboard layers",
-      items: [
-        {
-          title: "Platform admin dashboard",
-          description:
-            "Operator onboarding, global settings, finance reports, performance monitoring, and external integrations.",
-        },
-        {
-          title: "Operator dashboard",
-          description:
-            "Daily flights, capacity, pricing, reservations, invoices, and partner management for each company.",
-        },
-        {
-          title: "Agency dashboard",
-          description:
-            "B2B bookings, balance review, voucher downloads, and payment status tracking for partners.",
-        },
-        {
-          title: "Customer support dashboard",
-          description:
-            "Reservation updates, resends, notes, cancellations, and refund workflows.",
-        },
-      ],
-    },
-    integrations: {
-      title: "External integration readiness",
-      items: [
-        "Shopify for storefront-led booking bundles",
-        "Amadeus for broader travel-service connectivity",
-        "Booking.com as a future distribution touchpoint",
-        "Local and international payment gateways",
-        "Temple, transport, and sound-and-light ticketing systems",
-        "Mobile applications through a shared API layer",
-      ],
-    },
-    roadmap: {
-      title: "Suggested delivery phases",
-      items: [
-        "Phase 1: Discovery, workflow mapping, pricing rules, and permission design",
-        "Phase 2: MVP for reservations, ticketing, operators, payments, and baseline reporting",
-        "Phase 3: External integrations, mobile apps, automated notifications, and advanced analytics",
-      ],
-    },
-    portalPreview: {
-      title: "Portal snapshot",
-      description:
-        "A simple preview page showing how data can be split across central admins, operators, and partners.",
-      cta: "Open preview",
-    },
-    footer:
-      "A scalable starting point for a unified balloon operations and booking platform in Luxor.",
+    footer: "© 2025 Luxor Balloon — Hot air balloon booking platform in Luxor. All rights reserved.",
   },
 };
 
